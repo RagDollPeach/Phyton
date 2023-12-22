@@ -106,15 +106,14 @@ def count_words(queries):
     more_then_3 = 0
 
     for words in queries:
-        match len(words.split()):
-            case 1:
-                one_word += 1
-            case 2:
-                two_words += 1
-            case 3:
-                three_words += 1
-            case  _:
-                more_then_3 += 1
+        if len(words.split() == 1):
+            one_word += 1
+        elif len(words.split() == 2):
+            two_words += 1
+        elif len(words.split() == 3):
+            three_words += 1
+        else:
+            more_then_3 += 1
 
     summ = one_word + two_words + three_words + more_then_3
 
